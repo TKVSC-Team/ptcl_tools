@@ -29,14 +29,14 @@ def interactive_main_loop():
         mode = questionary.select(
             "What would you like to do?",
             choices=[
-                "1. Interactive Effect Searcher (View single emitters)",
+                "1. Effect Searcher (View single emitters)",
                 "2. Dump all shapes from an effect to JSON",
                 "3. Extract PtclBin from a YAML file",
                 "Exit"
             ]
         ).ask()
         
-        if mode == "1. Interactive Effect Searcher (View single emitters)":
+        if mode == "1. Effect Searcher (View single emitters)":
             from commands.interactive import run
             run(config, decompressors)
         elif mode == "2. Dump all shapes from an effect to JSON":
