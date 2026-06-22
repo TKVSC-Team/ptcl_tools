@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 from core.config import load_config
 from core.compression import load_decompressors
@@ -15,7 +14,7 @@ def interactive_main_loop():
         print("[!] 'zsdic_pack_path' not found in config.json")
         return
         
-    print("[*] Loading TOTK compression dictionaries... (This might take a moment)")
+    print("[*] Loading TOTK compression dictionaries...")
     try:
         decompressors = load_decompressors(pack_path)
     except Exception as e:
@@ -52,9 +51,6 @@ def interactive_main_loop():
 def main():
     parser = argparse.ArgumentParser(description="PTCL Tools")
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
-
-    # Interactive Command
-    parser_interactive = subparsers.add_parser("interactive", help="Open the interactive searcher menu")
 
     # Analyze Command
     parser_analyze = subparsers.add_parser("analyze", help="Analyze a specific .esetb.byml.zs file")

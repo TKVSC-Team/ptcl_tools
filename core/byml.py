@@ -4,7 +4,6 @@ from .compression import decompress_totk_file
 def find_ptcl_bytes_in_byml(byml_node):
     """
     Recursively searches the BYML hash/dictionary for the 'PtclBin' key.
-    oead parses binary nodes directly into Python bytes.
     """
     if isinstance(byml_node, (dict, getattr(oead.byml, 'Hash', dict), getattr(oead.byml, 'Dictionary', dict))):
         if "PtclBin" in byml_node:
