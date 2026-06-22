@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ptcl-tools"
+version = "1.0.0a1"
+description = "A set of tools for working with Nintendo effect files, nicely packaged into a CLI menu for easy use."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "questionary>=2.0.0",
+    "prompt_toolkit>=3.0.0",
+    "zstandard>=0.21.0",
+    "tkvsc-oead>=1.4.5"
+]
+
+[project.scripts]
+ptcl-tools = "main:main"
